@@ -4,7 +4,7 @@ approx = nan(size(n));  %definiere Array approx und fülle size(n) Plätze mit n
 
 
 for k=1:length(n)   %k ist hier die Laufvariable, die bis length(n) läuft
-    approx(k) = 2 * sqrt(3) * sum(arrayfun(@(j) (-1)^j/(2*j+1) * 3^j, 0:n(k)));  %2j ist offenbar != 2*j
+    approx(k) = 2 * sqrt(3) * sum(arrayfun(@(j) (-1)^j/((2*j+1) * 3^j), 0:n(k)));  %2j ist offenbar != 2*j
 end
 
 
