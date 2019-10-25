@@ -4,7 +4,7 @@ approx = nan(size(n));  %definiere Array approx und fülle size(n) Plätze mit n
 
 
 for k=1:length(n)   %k ist hier die Laufvariable, die bis length(n) läuft
-    approx(k) = (16/5) * sum(arrayfun(@(k) (-1)^k/((2*k+1)*5^(2*k)),0:n(k))) - sum(arrayfun(@(k) (-1)^k/((2*k+1)*239^(2*k)),0:n(k)));
+    approx(k) = (16/5) * sum(arrayfun(@(k) (-1)^k/((2*k+1)*5^(2*k)),0:n(k))) - (4/239) * sum(arrayfun(@(k) (-1)^k/((2*k+1)*239^(2*k)),0:n(k)));
     
 end
 
